@@ -1,0 +1,82 @@
+
+.logo {
+	text-align: center;
+	color: black;
+	text-decoration: none;
+	border-bottom: solid 1px; 
+    font-weight: bold;	
+    font-family: system-ui;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+#menuLeft{
+	max-width: 70%;      /*ko dùng width vì lỗi bootstrap*/
+	float: left;
+	min-height: 50px; 
+	padding-top: 5px;
+	padding-left: 70px; 
+}
+#menuLeft ul li{
+	list-style: none;
+	float: left;
+	padding-right: 30px; 
+	font-size: 17px;
+}
+#menuLeft ul li a{
+	text-decoration: none;
+	color:black;
+}
+#menuLeft ul li a:hover{
+	color: red;                   /*hiệu ứng khi click có màu đỏ*/
+}
+#menuRight{
+	width: 30%;      /*ko dùng width vì lỗi bootstrap*/
+	min-height: 50px; 
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.end{
+	text-align: center;
+	color: black;
+	text-decoration: none;
+	border-bottom: solid 2px; 
+    font-weight: bold;	
+    font-family: system-ui;
+}
+
+
+
