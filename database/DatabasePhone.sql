@@ -1,31 +1,30 @@
 create database phone;
 use phone;
 
-create table `admin`(
+create table adminp(
 adminId  int primary key NOT NULL,
-userName nvarchar(100)  NOT NULL,
-password nvarchar(100)  NOT NULL
+userName varchar(100)  NOT NULL,
+password varchar(100)  NOT NULL
 );
-
 
 create table users(
 userId      int primary key NOT NULL,
-userName    nvarchar(255) NOT NULL,
-password    nvarchar(255) NOT NULL,
-name        nvarchar(255) NOT NULL,
-sex         nvarchar(10)  NOT NULL,
+userName    varchar(255) NOT NULL,
+password    varchar(255) NOT NULL,
+name        varchar(255) NOT NULL,
+sex         varchar(10)  NOT NULL,
 birth       date          NOT NULL,
-address     nvarchar(255) NOT NULL,
+address     varchar(255) NOT NULL,
 telephone   int NOT NULL,
-email       nvarchar(255) NOT NULL
+email       varchar(255) NOT NULL
 );
 
  
 
 create table supplier(
 supplierId   int primary key NOT NULL,
-supplierName nvarchar(255) NOT NULL,
-address      nvarchar(255) NOT NULL
+supplierName varchar(255) NOT NULL,
+address      varchar(255) NOT NULL
 );
 
 
@@ -33,17 +32,17 @@ address      nvarchar(255) NOT NULL
 create table product(
 productId    int primary key  NOT NULL,
 supplierId   int 		      NOT NULL,
-productName  nvarchar(255)    NOT NULL,
-os           nvarchar(255)    NOT NULL,
-cpu          nvarchar(30)     NOT NULL,
-ram          nvarchar(30)     NOT NULL,
-rom          nvarchar(30)     NOT NULL,
+productName  varchar(255)    NOT NULL,
+os           varchar(255)    NOT NULL,
+cpu          varchar(30)     NOT NULL,
+ram          varchar(30)     NOT NULL,
+rom          varchar(30)     NOT NULL,
 size         float 			  NOT NULL,
 screen       int              NOT NULL,
-color 	     nvarchar(30) 	  NOT NULL,
+color 	     varchar(30) 	  NOT NULL,
 weight       float     	      NOT NULL,
 battery      int 			  NOT NULL,
-warranty     nvarchar(30)     NOT NULL,  
+warranty     varchar(30)     NOT NULL,  
 quantity     int 			  NOT NULL, 
 foreign key(supplierId) references supplier(supplierId)
 );
@@ -82,7 +81,7 @@ orderDetailId  int primary key NOT NULL,
 orderId        int NOT NULL,
 productId      int NOT NULL,
 quantity       int NOT NULL,
-foreign key(orderId) references userOrder(orderId),
+foreign key(orderId) references `order`(orderId),
 foreign key(productId) references product(productId)
 );
 
