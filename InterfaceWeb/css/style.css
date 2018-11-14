@@ -1,0 +1,171 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+
+#dangky{
+	width: 600px;		/*độ rọng form đăng ký*/
+	margin: 5px auto;	/*cho form dang ky vao giua-*/
+	background-color: #e9ebee;
+	border-radius: 10px; /* bo góc*/
+	padding-left: 30px;		/*căn lề trái*/
+}
+
+#dangky span {
+	font-size: 20px;
+	font-weight: bold;		/*Kiểu in đậm*/
+	color:black;
+	margin-left:10px;
+}
+
+#input1{
+	display: inline-block;       /*cho text nằm chính giữa cái box*/
+	background-color: #299cc7;
+	color: white;
+	padding: 7px 1px 33px 14px;  /*bo cho thành hình tròn*/
+	border-radius: 100%;		 /*bo box 360 độ*/				
+	font-size: 20px;
+	font-weight: bold;
+	height: 30px;
+	width: 7%;
+}
+#input{
+	padding-left: 30px;
+	padding-top:5px;             /*Căn cho đẹp*/
+	padding-bottom: 5px; 
+	margin-top:10px;
+	margin-bottom: 10px;
+	width:90%;
+	height: 40px;				/*Chiều cao  ô nhập*/
+	background-color: #ffffff;
+	border-radius: 10px;
+}
+
+#sex{
+	padding-left: 30px;
+	width:50%;
+	height: 20px;
+	margin-right:-110px;
+	margin-left: -80px;
+}
+
+#signup{
+	width: 90%;
+	color:white;
+	border-radius: 15px; 	 /*Bo góc*/
+	background-color: #619f4e;
+	font-size:29px;
+	padding:10px;
+	margin-top:30px;
+	margin-bottom: 20px;
+
+}
+#signin{
+	width: 90%;
+	color:white;
+	border-radius: 15px; 	 /*Bo góc*/
+	background-color: #619f4e;
+	font-size:29px;
+	padding:10px;
+	margin-top:30px;
+	margin-bottom: 20px;
+
+}
+
+/* menu */
+#menuLeft{
+	max-width: 70%;      /*ko dùng width vì lỗi bootstrap*/
+	float: left;
+	min-height: 50px; 
+	padding-top: 5px;
+	padding-left: 70px; 
+}
+#menuLeft ul li{
+	list-style: none;
+	float: left;
+	padding-right: 30px; 
+	font-size: 17px;
+}
+
+#menuLeft ul li a{
+	text-decoration: none;
+	color:black;
+}
+#menuLeft ul li a:hover{
+	color: red;                   /*hiệu ứng khi click có màu đỏ*/
+}
+
+.thumbnail .caption h4{
+	font-size: 25px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.pull-right {
+    float: right!important;       /*important cái này css là ăn chắc style*/
+    text-decoration: line-through;/* giá cũ bị gạch chân*/
+}
+
+.listProduct{
+	padding-left:80px;
+	padding-right:80px;
+}
+#footer{
+	height: 300px;
+	background-color: black;
+	margin-top:80px;
+}
+.modal-backdrop{
+	z-index: 0;
+}
+.modal-content{
+	width: 800px;
+	margin: 0 auto;
+}
+.listProduct .col-lg-2{
+	width: 20%;                 /* căn 5 cái sp thôi*/
+}
+#back_top {
+    font-size: 30px;
+    cursor: pointer;  /* trỏ vào có hình bàn tay */
+    position: fixed;  /* fix vị trí*/
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    background: #1fb53a; /*màu*/
+    bottom: 130px;	 /*130px so vs bottom*/
+    right: 20px;
+    color: #fff;
+    display: none;
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.3s;
+}
+#back_top i{padding:0 10px !important;}
+#back_top:hover{
+    background:  #ff9900;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

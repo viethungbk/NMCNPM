@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trang Chủ</title>
+	<meta   charset="utf=8">
+	<meta   name ="viewport" content="with=device-with,initial-scale=1">
+	<link   rel="stylesheet" href ="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+</head>
+<body id="myPage">
+	<div>
+		<!--fix cứng ở trên top-->
+		<nav class="navbar navbar-inverse navbar-fixed-top">                                       
+			<div class="container" >                                                            
+				<div class="navbar-header">
+					<!--Tạo 1 cái icon khi thu nhỏ màn hình-->                             
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MyNavBar"> 
+						<span class="icon-bar"></span>    
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>                         
+					<a class="navbar-brand"  style="font-size:20px;color:white" href="trangchu.html" >Trang chủ</a>        
+				</div>
+				<!--Trượt lên trượt xuống bằng icon khi màn thu nhỏ-->
+				<div class="collapse navbar-collapse" id="MyNavBar">       
+					<div>
+						<form class="navbar-form navbar-left" role="search" action="abc.php">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Tìm kiếm...">
+							</div>
+							<button type="submit" class="btn btn-default">
+								<span class="glyphicon glyphicon-search"></span>
+							</button>
+						</form>
+					</div>
+
+					<div>
+						<ul class="nav navbar-nav navbar-right">
+							<!--icon đăng ký-->
+							<li data-toggle="modal" data-target="#SignUp">
+								<a><span class="glyphicon glyphicon-user" ></span> Đăng ký</a>
+							</li>  
+							<!--icon đăng nhập-->   
+							<li data-toggle="modal" data-target="#SignIn">
+								<a><span class="glyphicon glyphicon-log-in" ></span> Đăng nhập</a>
+							</li>  
+							<!--icon giỏ hàng-->
+							<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng</a></li>
+						</ul>
+						<!--modal đăng ký-->
+						<div class="modal fade" id="SignUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<h4 class="modal-title" id="myModalLabel">
+										<span ><h1 style="font-weight: bold;text-align:center;margin-top:-8px;">Sign Up</h1></span>
+									</h4>
+								</div>
+								<div class="modal-body">
+									<div class="row" style="padding-left:85px;">
+										<div class="col-sm-6 push col-lg-1">
+											
+											<!--form đăng ký-->
+											<form action="abc.php" method="post" id="dangky"> <!-- phuong thuc truyen thong tin post-->
+												<p id="input1">1</p><span>Username</span>
+												<br>
+												<input id="input" type="text" name="username" placeholder="Input your username">
+												<br>
+												<p id="input1">2</p><span>Password</span>
+												<br>
+												<input id="input" type="password" name="password" placeholder="Input your password">
+												<br>
+												<p id="input1">3</p><span>Name</span>
+												<br>
+												<input id="input" type="text" name="name" placeholder="Input your name">
+												<br>
+												<p id="input1">4</p><span>Sex</span>
+												<br>
+												<input id="sex" type="radio" value="Nam" name="sex"><span>Male</span></input>
+												<br>
+												<input id="sex" type="radio" value="Nữ" name="sex"><span>Female</span></input>
+												<br>
+												<p id="input1">5</p><span>Birthday</span>
+												<br>
+												<input id="input" type="text" name="birth" placeholder="YYYY-MM-DD">
+												<br>
+												<p id="input1">6</p><span>Address</span>
+												<br>
+												<input id="input" type="text" name="address" placeholder="Input your address">
+												<br>
+												<p id="input1">7</p><span>Email</span>
+												<br>
+												<input id="input" type="text" name="email" placeholder="Input your email">
+												<br>
+												<p id="input1">8</p><span>Telephone</span>
+												<br>
+												<input id="input" type="text" name="telephone" placeholder="Input your telephone number">
+												<br>
+												<br>
+												<input type="checkbox" value="#" name="">Tôi đồng ý với<a href="DieuKhoan.html"> các điều khoản của web</a></input>
+												<br>
+												<input id="signup" type="submit" name="signup" value="Sign Up Now"></input>
+												<br>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--modal đăng nhập-->
+						<div class="modal fade" id="SignIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<h4 class="modal-title" id="myModalLabel">
+										<span ><h1 style="font-weight: bold;text-align:center;margin-top: -8px;">Sign In</h1></span>
+									</h4>
+								</div>
+								<div class="modal-body">
+									<div class="row" style="padding-left:85px;">
+										<div class="col-sm-6 push col-lg-1">
+											<!--form đăng ký-->
+											<form action="abc.php" method="post" id="dangky"> <!-- phuong thuc truyen thong tin post-->
+												<p id="input1">1</p><span>Username</span>
+												<br>
+												<input id="input" type="text" name="username" placeholder="Input your username">
+												<br>
+												<p id="input1">2</p><span>Password</span>
+												<br>
+												<input id="input" type="password" name="password" placeholder="Input your password">
+												<br>
+												<a href="#" style="padding-left:350px;">Quên mật khẩu ?</a>	
+												<input id="signin" type="submit" name="signin" value="Sign In Now"></input>
+												<br>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</nav>	
+			</div>
+
+			<div id="carousel-id" class="carousel slide" data-ride="carousel" style="padding-top: 50px;">
+				<ol class="carousel-indicators">
+					<li data-target="#carousel-id" data-slide-to="0" class=""></li>
+					<li data-target="#carousel-id" data-slide-to="1" class=""></li>
+					<li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="item">
+						<img src="images/dien-thoai-xiaomi.jpg" width="100%" alt="First slide">
+						<div class="container">
+							<div class="carousel-caption">
+								<p><a class="btn btn-lg btn-primary" href="#" role="button">Xem ngayy</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<img src="images/vcr-giao-hang-hoa-toc-1366x500-170623-jpg.png" width="100%" alt="Second slide">
+						<div class="container">
+							<div class="carousel-caption">
+								<p><a class="btn btn-lg btn-primary" href="#" role="button">Xem ngay</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="item active">
+						<img src="images/xiaomi-mi-8-se.jpg" width="100%" alt="Third slide">
+						<div class="container">
+							<div class="carousel-caption">
+								<p><a class="btn btn-lg btn-primary" href="#" role="button">Xem ngay</a></p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+				<a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+
+			<!--End banner-->
+			<hr style="">
+
+			<!-- menu-->
+			<div class="container-fluid">
+				<div id="menuLeft">
+					<ul>
+						<li style="color:red">Hãng:</li>
+						<li><a href="#">Iphone</a></li>
+						<li><a href="#">Xiaomi</a></li>
+						<li><a href="#">SamSung</a></li>
+						<li><a href="#">Bkav</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Khác    		 
+								<span class="caret"></span>    		<!--icon tam giác-->
+							</a>                                               
+							<ul class="dropdown-menu">
+								<li><a href="#">Sony</a></li>
+								<li><a href="#">Oppo</a></li>
+								<li><a href="#">LG</a></li>
+								<li><a href="#">Asus</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="container-fluid listProduct">
+				<div class="row">
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<a href="#" class="thumbnail">
+							<img src="images/medium-xiaomi-mi-8-avarta-001.jpg" alt="">
+							<div class="caption">
+								<h4>Xiaomi mi8</h4>
+								<div>
+									<span> 2.800.000 đ</span>
+									<span class="pull-right">3.000.000 đ</span>
+								</div>
+								<br>
+								<div class="text-center">
+									<button type="button" class="btn btn-default">Xem chi tiết</button>
+									<button type="button" class="btn btn-primary">Mua</button>
+								</div>
+
+							</div> 
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<a href="#" class="thumbnail">
+							<img src="images/medium-xiaomi-mi-8-avarta-001.jpg" alt="">
+							<div class="caption">
+								<h4>Xiaomi mi8</h4>
+								<div>
+									<span> 2.800.000 đ</span>
+									<span class="pull-right">3.000.000 đ</span>
+								</div>
+								<br>
+								<div class="text-center">
+									<button type="button" class="btn btn-default">Xem chi tiết</button>
+									<button type="button" class="btn btn-primary">Mua</button>
+								</div>
+
+							</div> 
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<a href="#" class="thumbnail">
+							<img src="images/medium-xiaomi-mi-8-avarta-001.jpg" alt="">
+							<div class="caption">
+								<h4>Xiaomi mi8</h4>
+								<div>
+									<span> 2.800.000 đ</span>
+									<span class="pull-right">3.000.000 đ</span>
+								</div>
+								<br>
+								<div class="text-center">
+									<button type="button" class="btn btn-default">Xem chi tiết</button>
+									<button type="button" class="btn btn-primary">Mua</button>
+								</div>
+
+							</div> 
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<a href="#" class="thumbnail">
+							<img src="images/medium-xiaomi-mi-8-avarta-001.jpg" alt="">
+							<div class="caption">
+								<h4>Xiaomi mi8</h4>
+								<div>
+									<span> 2.800.000 đ</span>
+									<span class="pull-right">3.000.000 đ</span>
+								</div>
+								<br>
+								<div class="text-center">
+									<button type="button" class="btn btn-default">Xem chi tiết</button>
+									<button type="button" class="btn btn-primary">Mua</button>
+								</div>
+
+							</div> 
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<a href="#" class="thumbnail">
+							<img src="images/medium-xiaomi-mi-8-avarta-001.jpg" alt="">
+							<div class="caption">
+								<h4>Xiaomi mi8</h4>
+								<div>
+									<span> 2.800.000 đ</span>
+									<span class="pull-right">3.000.000 đ</span>
+								</div>
+								<br>
+								<div class="text-center">
+									<button type="button" class="btn btn-default">Xem chi tiết</button>
+									<button type="button" class="btn btn-primary">Mua</button>
+								</div>
+
+							</div> 
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<a href="#" class="thumbnail">
+							<img src="images/medium-xiaomi-mi-8-avarta-001.jpg" alt="">
+							<div class="caption">
+								<h4>Xiaomi mi8</h4>
+								<div>
+									<span> 2.800.000 đ</span>
+									<span class="pull-right">3.000.000 đ</span>
+								</div>
+								<br>
+								<div class="text-center">
+									<button type="button" class="btn btn-default">Xem chi tiết</button>
+									<button type="button" class="btn btn-primary">Mua</button>
+								</div>
+
+							</div> 
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<a href="#" class="thumbnail">
+							<img src="images/medium-xiaomi-mi-8-avarta-001.jpg" alt="">
+							<div class="caption">
+								<h4>Xiaomi mi8</h4>
+								<div>
+									<span> 2.800.000 đ</span>
+									<span class="pull-right">3.000.000 đ</span>
+								</div>
+								<br>
+								<div class="text-center">
+									<button type="button" class="btn btn-default">Xem chi tiết</button>
+									<button type="button" class="btn btn-primary">Mua</button>
+								</div>
+
+							</div> 
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<a href="#" class="thumbnail">
+							<img src="images/medium-xiaomi-mi-8-avarta-001.jpg" alt="">
+							<div class="caption">
+								<h4>Xiaomi mi8</h4>
+								<div>
+									<span> 2.800.000 đ</span>
+									<span class="pull-right">3.000.000 đ</span>
+								</div>
+								<br>
+								<div class="text-center">
+									<button type="button" class="btn btn-default">Xem chi tiết</button>
+									<button type="button" class="btn btn-primary">Mua</button>
+								</div>
+
+							</div> 
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<a href="#" class="thumbnail">
+							<img src="images/medium-xiaomi-mi-8-avarta-001.jpg" alt="">
+							<div class="caption">
+								<h4>Xiaomi mi8</h4>
+								<div>
+									<span> 2.800.000 đ</span>
+									<span class="pull-right">3.000.000 đ</span>
+								</div>
+								<br>
+								<div class="text-center">
+									<button type="button" class="btn btn-default">Xem chi tiết</button>
+									<button type="button" class="btn btn-primary">Mua</button>
+								</div>
+
+							</div> 
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<a href="#" class="thumbnail">
+							<img src="images/medium-xiaomi-mi-8-avarta-001.jpg" alt="">
+							<div class="caption">
+								<h4>Xiaomi mi8</h4>
+								<div>
+									<span> 2.800.000 đ</span>
+									<span class="pull-right">3.000.000 đ</span>
+								</div>
+								<br>
+								<div class="text-center">
+									<button type="button" class="btn btn-default">Xem chi tiết</button>
+									<button type="button" class="btn btn-primary">Mua</button>
+								</div>
+
+							</div> 
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<a href="#" class="thumbnail">
+							<img src="images/medium-xiaomi-mi-8-avarta-001.jpg" alt="">
+							<div class="caption">
+								<h4>Xiaomi mi8</h4>
+								<div>
+									<span> 2.800.000 đ</span>
+									<span class="pull-right">3.000.000 đ</span>
+								</div>
+								<br>
+								<div class="text-center">
+									<button type="button" class="btn btn-default">Xem chi tiết</button>
+									<button type="button" class="btn btn-primary">Mua</button>
+								</div>
+
+							</div> 
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<a href="#" class="thumbnail">
+							<img src="images/medium-xiaomi-mi-8-avarta-001.jpg" alt="">
+							<div class="caption">
+								<h4>Xiaomi mi8</h4>
+								<div>
+									<span> 2.800.000 đ</span>
+									<span class="pull-right">3.000.000 đ</span>
+								</div>
+								<br>
+								<div class="text-center">
+									<button type="button" class="btn btn-default">Xem chi tiết</button>
+									<button type="button" class="btn btn-primary">Mua</button>
+								</div>
+
+							</div> 
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<a href="#" class="thumbnail">
+							<img src="images/medium-xiaomi-mi-8-avarta-001.jpg" alt="">
+							<div class="caption">
+								<h4>Xiaomi mi8</h4>
+								<div>
+									<span> 2.800.000 đ</span>
+									<span class="pull-right">3.000.000 đ</span>
+								</div>
+								<br>
+								<div class="text-center">
+									<button type="button" class="btn btn-default">Xem chi tiết</button>
+									<button type="button" class="btn btn-primary">Mua</button>
+								</div>
+
+							</div> 
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<a href="#" class="thumbnail">
+							<img src="images/medium-xiaomi-mi-8-avarta-001.jpg" alt="">
+							<div class="caption">
+								<h4>Xiaomi mi8</h4>
+								<div>
+									<span> 2.800.000 đ</span>
+									<span class="pull-right">3.000.000 đ</span>
+								</div>
+								<br>
+								<div class="text-center">
+									<button type="button" class="btn btn-default">Xem chi tiết</button>
+									<button type="button" class="btn btn-primary">Mua</button>
+								</div>
+
+							</div> 
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<a href="#" class="thumbnail">
+							<img src="images/medium-xiaomi-mi-8-avarta-001.jpg" alt="">
+							<div class="caption">
+								<h4>Xiaomi mi8</h4>
+								<div>
+									<span> 2.800.000 đ</span>
+									<span class="pull-right">3.000.000 đ</span>
+								</div>
+								<br>
+								<div class="text-center">
+									<button type="button" class="btn btn-default">Xem chi tiết</button>
+									<button type="button" class="btn btn-primary">Mua</button>
+								</div>
+
+							</div> 
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<a href="#" class="thumbnail">
+							<img src="images/medium-xiaomi-mi-8-avarta-001.jpg" alt="">
+							<div class="caption">
+								<h4>Xiaomi mi8</h4>
+								<div>
+									<span> 2.800.000 đ</span>
+									<span class="pull-right">3.000.000 đ</span>
+								</div>
+								<br>
+								<div class="text-center">
+									<button type="button" class="btn btn-default">Xem chi tiết</button>
+									<button type="button" class="btn btn-primary">Mua</button>
+								</div>
+
+							</div> 
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<a href="#" class="thumbnail">
+							<img src="images/medium-xiaomi-mi-8-avarta-001.jpg" alt="">
+							<div class="caption">
+								<h4>Xiaomi mi8</h4>
+								<div>
+									<span> 2.800.000 đ</span>
+									<span class="pull-right">3.000.000 đ</span>
+								</div>
+								<br>
+								<div class="text-center">
+									<button type="button" class="btn btn-default">Xem chi tiết</button>
+									<button type="button" class="btn btn-primary">Mua</button>
+								</div>
+
+							</div> 
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<a href="#" class="thumbnail">
+							<img src="images/medium-xiaomi-mi-8-avarta-001.jpg" alt="">
+							<div class="caption">
+								<h4>Xiaomi mi8</h4>
+								<div>
+									<span> 2.800.000 đ</span>
+									<span class="pull-right">3.000.000 đ</span>
+								</div>
+								<br>
+								<div class="text-center">
+									<button type="button" class="btn btn-default">Xem chi tiết</button>
+									<button type="button" class="btn btn-primary">Mua</button>
+								</div>
+							</div> 
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<a href="#" class="thumbnail">
+							<img src="images/medium-xiaomi-mi-8-avarta-001.jpg" alt="">
+							<div class="caption">
+								<h4>Xiaomi mi8</h4>
+								<div>
+									<span> 2.800.000 đ</span>
+									<span class="pull-right">3.000.000 đ</span>
+								</div>
+								<br>
+								<div class="text-center">
+									<button type="button" class="btn btn-default">Xem chi tiết</button>
+									<button type="button" class="btn btn-primary">Mua</button>
+								</div>
+
+							</div> 
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+						<a href="#" class="thumbnail">
+							<img src="images/medium-xiaomi-mi-8-avarta-001.jpg" alt="">
+							<div class="caption">
+								<h4>Xiaomi mi8</h4>
+								<div>
+									<span> 2.800.000 đ</span>
+									<span class="pull-right">3.000.000 đ</span>
+								</div>
+								<br>
+								<div class="text-center">
+									<button type="button" class="btn btn-default">Xem chi tiết</button>
+									<button type="button" class="btn btn-primary">Mua</button>
+								</div>
+
+							</div> 
+						</a>
+					</div>
+				</div>
+			</div>
+			<footer class="text-center">
+				<h1 style="font-size: bold">Thông tin cửa hàng</h1>
+				<div class="footer-top" style="background-color:#f9f9ff;color: black">
+					<div class="container-fluid" style="padding-left: 100px;padding-right: 100px;">
+						<div class="row">
+							<div class="col-sm-4">
+								<h3>SELL PHONE ONLINE - ĐIỆN THOẠI CHÍNH HÃNG</h3>
+								<p><strong>Đ/c:</strong><span>NHÓM 10 NMCNPM ĐẠI HỌC BÁCH KHOA HÀ NỘI </span></p>
+								<p><strong>Website:</strong><a href="">sellphoneonline.vn</a></p>
+								<p><strong>Email:</strong><span>sellphoneonline@gmail.com</span></p>
+								<p><strong>Hotline:</strong><span>0123456789</span></p>
+							</div>
+							<div class="col-sm-8" style="margin: 5px auto">
+								<iframe sytle = " " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.0383351459554!2d105.85246341490414!3d20.99110038601885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac13017a85ed%3A0x7484f64436c86481!2zTmfDoWNoIDY3IE5nw7UgR-G7kWMgxJDhu4EsIEhvw6BuZyBWxINuIFRo4bulLCBIb8OgbmcgTWFpLCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1540547273906" width=100% height="450" frameborder="0" style="border:0" allowfullscreen>
+								</iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="back_top"><i class="glyphicon glyphicon-menu-up"></i></div>
+			</footer>
+
+			<script type="text/javascript">
+				$(window).scroll(function(){         
+					if ($(window).scrollTop()>0){
+						$("#back_top").show(300);      /*lăn chuột xuống 300px thì xuất hiện icon back top*/
+					}
+					else{
+						$("#back_top").hide(300);
+					}
+				});
+				$('#back_top').click(function(){
+					$('html, body').animate({scrollTop:0},500);
+				});
+			</script>
+		</body>
+		</html>
