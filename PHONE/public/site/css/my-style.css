@@ -1,0 +1,22 @@
+.product_img img {
+    max-height: 150px;
+    min-height: 150px;
+    min-width: 100px;
+}
+
+#logo img {
+    width: auto;
+    height: 100%;
+    /* padding-bottom: 10px; */
+}
+
+.rsContainer img {
+    max-width: 580px;
+    min-width: 580px;
+    min-height: 205px;
+    max-height:205px;
+}
+
+.product_item h3 {
+    height: 32px;
+}
