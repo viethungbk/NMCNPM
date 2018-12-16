@@ -21,8 +21,12 @@ class Home extends MY_Controller {
 		$product_buyest=$this->product_model->get_list($input);
 		$this->data['product_buyest']=$product_buyest;
 
-		$data['temp']='site/home/index'; //biến temp là giao diện của phần nội dung chính sẽ được hiển thị đối với từng page
-		$this->load->view('site/layout', $data);//lấy dữ liệu từ MY COntroller rồi lại chuyển từ layout sang left
+		//lay nội dung của biến message
+		$message = $this->session->flashdata('message');
+		$this->data['message'] = $message;
+		
+		$this->data['temp']='site/home/index'; //biến temp là giao diện của phần nội dung chính sẽ được hiển thị đối với từng page
+		$this->load->view('site/layout', $this->data);//lấy dữ liệu từ MY COntroller rồi lại chuyển từ layout sang left
 	}
 
 }

@@ -10,19 +10,15 @@ $this->load->view('site/slide');
 		<?php foreach ($product_newsest as $key): ?>					
 			<div class='product_item'>
 				<h3>
-					<a  href="" title="<?php echo $key->name ?>">
+					<a  href="<?php echo base_url('product/view/'.$key->id) ?>" title="<?php echo $key->name ?>">
 						<?php echo $key->name ?>	                     
 					</a>
 				</h3>
 				<div class='product_img'>
-					<a  href="" title="<?php echo $key->name ?>">
+					<a  href="<?php echo base_url('product/view/'.$key->id) ?>" title="<?php echo $key->name ?>">
 						<img src="<?php echo base_url('upload/product/'.$key->image_link ) ?>" alt=''/>
 					</a>
 				</div>
-
-
-
-
 
 				<p class='price'>
 					<?php if($key->discount > 0): ?>
@@ -69,10 +65,6 @@ $this->load->view('site/slide');
 							</a>
 						</div>
 
-
-
-
-
 						<p class='price'>
 							<?php if($key->discount > 0): ?>
 								<?php $price_new=$key->price - $key->discount; ?>
@@ -88,7 +80,7 @@ $this->load->view('site/slide');
 							</center>
 
 							<div class='action'>
-								<p style='float:left;margin-left:10px'>Lượt xem: <b><?php echo $key->view ?></b></p>
+								<p style='float:left;margin-left:10px'>Lượt mua: <b><?php echo $key->view ?></b></p>
 								<a class='button' href="" title='Mua ngay'>Mua ngay</a>
 								<div class='clear'></div>
 							</div>

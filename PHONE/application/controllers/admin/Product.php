@@ -55,7 +55,7 @@ Class Product extends MY_Controller
         	$input['where']['catalog_id'] = $catalog_id;
         }
         
-        //lay danh sach san pha
+        //lay danh sach san phẩm 
         $list = $this->product_model->get_list($input);
         $this->data['list'] = $list;
 
