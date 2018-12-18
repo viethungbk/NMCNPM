@@ -33,6 +33,7 @@ class Order extends MY_Controller {
    	    $input = array();
    	    $where = array();
    	    //lọc theo id
+
    	    $id = $this->input->get('id');
    	    if($id)
    	    {
@@ -45,21 +46,7 @@ class Order extends MY_Controller {
    	    {
    	       $where['user_id'] = $user;
    	    }
-   	    
-	    //lọc theo trạng thái thanh toán
-	    $transaction_status = $this->input->get('transaction_status');
-   	    if($transaction_status != '')
-   	    {
-   	       $where['transaction.status'] = $transaction_status;
-   	    }
-   	    
-	    //lọc theo trạng thái gui hang
-	    $status = $this->input->get('status');
-   	    if($status != '')
-   	    {
-   	       $where['order.status'] = $status;
-   	    }
-   	    
+  
    	    //lọc theo thời gian
    	    $created_to = $this->input->get('created_to');
    	    $created    = $this->input->get('created');
@@ -80,9 +67,12 @@ class Order extends MY_Controller {
    	    
 	     //Buoc 1:load thu vien phan trang
    	    $this->load->library('pagination');
+
    	    //Buoc 2:Cau hinh cho phan trang
    	    //lay tong so luong đơn hàng tu trong csdl
+   	    
    	    $total_rows = $this->order_model->get_total($input);
+   	    
    	    $config = array();
    	    $config['base_url']    = base_url('admin/order/index');
    	    $config['total_rows']  = $total_rows;
@@ -100,30 +90,7 @@ class Order extends MY_Controller {
 		foreach ($list as $row)
 		{
 		   $row->_amount = number_format($row->amount);
-		   if($row->status == 0)
-		   {
-		     $row->_status = 'pending';
-		   }
-		   elseif($row->status == 1)
-		   {
-		     $row->_status = 'completed';
-		   }
-		   elseif($row->status == 2)
-		   {
-		     $row->_status = 'cancel';
-		   }
-		   if($row->transaction_status == 0)
-		   {
-		     $row->_transaction_status = 'pending';
-		   }
-		   elseif($row->transaction_status == 1)
-		   {
-		     $row->_transaction_status = 'completed';
-		   }
-		   elseif($row->transaction_status == 2)
-		   {
-		     $row->_transaction_status = 'cancel';
-		   }  
+		   
 		}
 		$this->data['list']   = $list;
 		$this->data['action'] = current_url();

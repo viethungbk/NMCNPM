@@ -22,15 +22,8 @@
 							<td class="label" style="width:60px;"><label for="filter_id">Mã đơn hàng</label></td>
 							<td class="item"><input name="id" value="<?php if(isset($filter['order.id'])){echo $filter['order.id'];}?>" id="filter_id" type="text" style="width:95px;" /></td>
 							
-							<td class="label" style="width:60px;"><label for="filter_type"><?php echo lang('order'); ?></label></td>
-							<td class="item">
-								<select name="status">
-									<option value=""></option>
-									<option value='0' <?php if(isset($filter['order.status']) && $filter['order.status']=='0'){echo 'selected';}?>>Đợi xử lý</option>
-									<option value='1' <?php if(isset($filter['order.status']) && $filter['order.status']=='1'){echo 'selected';}?>>Đã gửi hàng</option>
-									<option value='2' <?php if(isset($filter['order.status']) && $filter['order.status']=='2'){echo 'selected';}?>>Hủy bỏ</option>
-								</select>
-							</td>
+							
+							
 							
 							<td class="label" style="width:60px;"><label for="filter_created"><?php echo lang('from_date'); ?></label></td>
 							<td class="item"><input name="created" value="<?php if($created){echo $created;}?>" id="filter_created" type="text" class="datepicker" /></td>
@@ -47,15 +40,7 @@
 						    <td class="label" style="width:60px;"><label for="filter_user">Mã thành viên</label></td>
 							<td class="item"><input name="user" value="<?php if(isset($filter['user_id'])){echo $filter['user_id'];}?>" id="filter_user" class="tipS" title="Nhập mã thành viên" type="text" /></td>
 
-							<td class="label"><label for="filter_status">Thanh toán</label></td>
-							<td class="item">
-								<select name="transaction_status">
-									<option value=""></option>
-									<option value='0' <?php if(isset($filter['transaction.status']) && $filter['transaction.status']=='0'){echo 'selected';}?>>Đợi xử lý</option>
-									<option value='1' <?php if(isset($filter['transaction.status']) && $filter['transaction.status']=='1'){echo 'selected';}?>>Thành công</option>
-									<option value='2' <?php if(isset($filter['transaction.status']) && $filter['transaction.status']=='2'){echo 'selected';}?>>Hủy bỏ</option>
-								</select>
-							</td>
+							
 							
 							<td class="label"><label for="filter_created_to"><?php echo lang('to_date'); ?></label></td>
 							<td class="item"><input name="created_to" value="<?php if($created_to){echo $created_to;}?>" id="filter_created_to" type="text" class="datepicker" /></td>
@@ -72,13 +57,12 @@
 				<tr>
 					<td style="width:60px;"><?php echo lang('no.'); ?></td>
 					<td><?php echo lang('product'); ?></td>
-					<td style="width:80px;"><?php echo lang('price'); ?></td>
-					<td style="width:50px;"><?php echo lang('quantity'); ?></td>
-					<td style="width:70px;"><?php echo lang('amount'); ?></td>
-					<td style="width:75px;"><?php echo lang('order'); ?></td>
-					<td style="width:75px;"><?php echo lang('tran'); ?></td>
-					<td style="width:75px;"><?php echo lang('created'); ?></td>
-					<td style="width:55px;"><?php echo lang('action'); ?></td>
+					<td style="width:100px;"><?php echo lang('price'); ?></td>
+					<td style="width:70px;"><?php echo lang('quantity'); ?></td>
+					<td style="width:90px;"><?php echo lang('amount'); ?></td>
+					
+					<td style="width:95px;"><?php echo lang('created'); ?></td>
+					<td style="width:75px;"><?php echo lang('action'); ?></td>
 				</tr>
 			</thead>
 			
@@ -127,17 +111,7 @@
 					<td class="textC"><?php echo $row->_amount?></td>
 					
 					
-					<td class="status textC">
-						<span class="<?php echo $row->_status; ?>">
-						<?php echo lang('order_status_'.$row->_status); ?>
-						</span>
-					</td>
 					
-					<td class="status textC">
-						<span class="<?php echo $row->_transaction_status; ?>">
-						<?php echo lang('tran_status_'.$row->_transaction_status); ?>
-						</span>
-					</td>
 					
 					<td class="textC"><?php echo mdate('%d-%m-%Y',$row->created)?></td>
 					

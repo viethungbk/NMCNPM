@@ -64,13 +64,7 @@
 						<div class="clear"></div>
 					</li>
 					
-					<li class="status">
-						<span><?php echo lang('status'); ?>:</span>
-						<font class="<?php echo $info->_status; ?>">
-							<?php echo lang('tran_status_'.$info->_status); ?>
-						</font>
-						<div class="clear"></div>
-					</li>
+					
 				</ul>
 				<div class="clear"></div>
 			</div>
@@ -110,24 +104,12 @@
 						</li>
 						<li><span><?php echo lang('price'); ?>:</span><?php echo $row->_price; ?></li>
 						<li><span><?php echo lang('quantity'); ?>:</span><?php echo $row->qty; ?></li>
-						<li class='status'><span><?php echo lang('status'); ?>:</span><font class="<?php echo $row->_status; ?>"><?php echo lang('order_status_'.$row->_status); ?></font></li>
+						
 						<li><span><?php echo lang('into_money'); ?>:</span> <font class="red f15"><?php echo $row->_amount; ?></font></li>
 						
 					</ul>
 					
-					<div class='action'>
-					   <?php if ($row->_can_active): ?>
-							<a href="<?php echo $row->_url_active; ?>" class="button blueB mr5">
-							<span><?php echo lang('active'); ?></span>
-							</a>
-					   <?php endif; ?>
-					   
-						<?php if ($row->_can_cancel): ?>
-						<a href="<?php echo $row->_url_cancel; ?>"  class="button redB mr5"><span>
-						<?php echo lang('cancel'); ?></span></a>
-					    <?php endif;?>
 					
-				</div>
 			</div>
 			</div>
 			<div class="clear" style='height:5px'></div>	

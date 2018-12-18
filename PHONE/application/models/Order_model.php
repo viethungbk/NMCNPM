@@ -9,7 +9,7 @@ Class Order_model extends MY_Model
     {
         $this->db->select('order.*,
 			                    product.name AS product_name,product.price,product.discount,product.image_link
-								,transaction.status as transaction_status, transaction.user_id, transaction.created, transaction.amount AS transaction_amount
+								, transaction.user_id, transaction.created, transaction.amount AS transaction_amount
 						  ');
         $this->get_list_set_input($input);
     
@@ -29,7 +29,7 @@ Class Order_model extends MY_Model
     {
         $this->db->select('order.*,
 			                    product.name AS product_name,product.price,product.discount,product.image_link
-								,transaction.status as transaction_status, transaction.user_id, transaction.created, transaction.amount AS transaction_amount
+								, transaction.user_id, transaction.created, transaction.amount AS transaction_amount
 						  ');
         $this->get_list_set_input($input);
     

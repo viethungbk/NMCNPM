@@ -90,7 +90,7 @@
 					<td class="textC"><?php echo get_date($row->created)?></td>
 					
 					<td class="option textC">
-						 <a title="Xem chi tiết bài viết" class="tipS" target="_blank" href="news/view/9.html">
+						 <a title="Xem chi tiết bài viết" class="tipS" href="<?php echo admin_url('news/detail/'.$row->id)?>">
 								<img src="<?php echo public_url('admin/images')?>/icons/color/view.png">
 						 </a>
 						 
