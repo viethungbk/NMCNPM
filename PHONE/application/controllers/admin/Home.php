@@ -18,7 +18,7 @@ Class Home extends MY_Controller
         $this->load->model('user_model');
         $this->load->model('news_model');
         $this->load->model('product_model');
-        $this->load->model('contact_model');
+        
         
         //thong ke doanh thu ngay hom nay
         $today = get_date(now());
@@ -51,7 +51,7 @@ Class Home extends MY_Controller
         $this->data['total_news']    = $this->news_model->get_total();
         $this->data['total_user']    = $this->user_model->get_total();
         $this->data['total_news']    = $this->news_model->get_total();
-        $this->data['total_contact'] = $this->contact_model->get_total();
+
         
         $this->lang->load('admin/home');
         

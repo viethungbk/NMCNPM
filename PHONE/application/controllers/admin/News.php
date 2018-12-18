@@ -119,7 +119,25 @@ Class News extends MY_Controller
         $this->data['temp'] = 'admin/news/add';
         $this->load->view('admin/main', $this->data);
     }
-    
+    /**
+     * Xem chi tiết sản phẩm
+     */
+    function detail()
+    {
+        $id = $this->uri->rsegment('3');
+        $news = $this->news_model->get_info($id);
+        if(!$news)
+        {
+            //tạo ra nội dung thông báo
+            $this->session->set_flashdata('message', 'Không tồn tại bài viết này');
+            redirect(admin_url('news'));
+        }
+        $this->data['news'] = $news;
+       
+        //load view
+        $this->data['temp'] = 'admin/news/detail';
+        $this->load->view('admin/main', $this->data);
+    }
     /*
      * Chinh sua bài viết
      */
