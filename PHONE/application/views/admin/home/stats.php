@@ -46,7 +46,7 @@
 				
 				<tr>
 					<td>
-						<div class="left">Tổng số gia dịch</div>
+						<div class="left">Tổng số giao dịch</div>
 						<div class="right f11"><a href="<?php echo admin_url('transaction')?>"><?php echo lang("detail"); ?></a></div>
 					</td>
 					
@@ -87,9 +87,7 @@
 						<?php echo number_format($total_user)?>
 					</td>
 				</tr>
-				<tr>
-					
-				</tr>
+				
 			</tbody>
 		</table>
 	</div>

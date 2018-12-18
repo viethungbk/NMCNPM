@@ -41,7 +41,7 @@
  <ul class="menu_top">
    <li class="active index-li"><a href="<?php echo base_url()?>">Trang chủ </a></li>
    <li class=""><a href="<?php echo base_url('Product')?>">Sản phẩm</a></li>
-   <li class=""><a href="https://tinhte.vn/">Tin tức</a></li>
+   <li class=""><a href="<?php echo site_url('news')?>">Tin tức</a></li>
    <?php if(isset($user_info)):?>
     <li class=""><a href="<?php echo site_url('user')?>">Xin chào: <?php echo $user_info->name?></a></li>
     <li class=""><a href="<?php echo site_url('user/logout')?>">Thoát</a></li>

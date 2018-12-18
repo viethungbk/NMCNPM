@@ -76,6 +76,7 @@ Class News extends MY_Controller
         if($this->input->post())
         {
             $this->form_validation->set_rules('title', 'Tiêu đề bài viết', 'required');
+            $this->form_validation->set_rules('intro', 'intro bài viết', 'required');
             $this->form_validation->set_rules('content', 'Nội dung bài viết', 'required');
             
             //nhập liệu chính xác
@@ -95,9 +96,8 @@ Class News extends MY_Controller
                 //luu du lieu can them
                 $data = array(
                     'title'      => $this->input->post('title'),
+                    'intro'  => $this->input->post('intro'),
                     'image_link' => $image_link,
-                    'meta_desc'  => $this->input->post('meta_desc'),
-                    'meta_key'   => $this->input->post('meta_key'),
                     'content'    => $this->input->post('content'),
                     'created'    => now(),
                 ); 
@@ -144,6 +144,7 @@ Class News extends MY_Controller
         if($this->input->post())
         {
             $this->form_validation->set_rules('title', 'Tiêu đề bài viết', 'required');
+            $this->form_validation->set_rules('intro', 'Tiêu đề bài viết', 'required');
             $this->form_validation->set_rules('content', 'Nội dung bài viết', 'required');
             
             //nhập liệu chính xác
@@ -162,9 +163,8 @@ Class News extends MY_Controller
             
                  //luu du lieu can them
                 $data = array(
-                    'title'      => $this->input->post('title'),
-                    'meta_desc'  => $this->input->post('meta_desc'),
-                    'meta_key'   => $this->input->post('meta_key'),
+                    'title'      => $this->input->post('title'),   
+                    'intro'      => $this->input->post('intro'),                 
                     'content'    => $this->input->post('content'),
                     'created'    => now(),
                 ); 

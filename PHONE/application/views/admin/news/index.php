@@ -42,6 +42,7 @@
 					<td style="width:21px;"><img src="<?php echo public_url('admin/images')?>/icons/tableArrows.png"></td>
 					<td style="width:60px;">Mã số</td>
 					<td>Tiêu đề</td>
+					<td>INTRO</td>
 					<td style="width:75px;">Ngày tạo</td>
 					<td style="width:120px;">Hành động</td>
 				</tr>
@@ -81,11 +82,11 @@
 					</a>
 					
 					<div class="f11">
-					  Xem: <?php echo $row->count_view?>					
+					  Lượt xem: <?php echo $row->count_view?>					
 					 </div>
 						
 					</td>
-					
+					<td class="textC"><?php echo $row->intro?></td>
 					<td class="textC"><?php echo get_date($row->created)?></td>
 					
 					<td class="option textC">

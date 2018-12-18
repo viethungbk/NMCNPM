@@ -35,34 +35,22 @@
 				</div>
 				<div class="content-box">
 					<ul class="news">
-						<li>
-							<a href="" title="Apple ra mắt Iphone X">
-								<img src="<?php echo public_url() ?>site/images/li.png">
-							Apple ra mắt Iphone X	                        </a>
-						</li>
-						<li>
-							<a href="" title="Samsung vs Apple ? Ai hơn ai ?">
-								<img src="<?php echo public_url() ?>site/images/li.png">
-							Samsung vs Apple ? Ai hơn ai ?	                        </a>
-						</li>
-						<li>
-							<a href="" title="Việt Nam vô địch AFF SUZUKI CUP 2018">
-								<img src="<?php echo public_url() ?>site/images/li.png">
-							Việt Nam vô địch AFF SUZUKI CUP 2018	                        </a>
-						</li>
-						<li>
-							<a href="" title="Quang hải đoạt giải cầu thủ xuất sắc nhất">
-								<img src="<?php echo public_url() ?>site/images/li.png">
-							Quang hải đoạt giải cầu thủ xuất sắc nhất	                        </a>
-						</li>
+						<?php foreach ($news_list as $row):?>
+							<li>
+								<a href="<?php echo site_url('news/view/'.$row->id); ?>" title="<?php echo $row->title?> ">
+									<img src="<?php echo base_url('upload/news/'.$row->image_link)?>" style="width:50px" alt="<?php echo $row->title?> ">
+									<?php echo $row->title?>                        
+								</a>
+							</li>
+						<?php endforeach;?>
 					</ul>
 				</div>
 			</div>		<!-- End news -->
 
 			
-			</div>
-			<!-- End Fanpage -->
+		</div>
+		<!-- End Fanpage -->
 
-			
+		
 
 
