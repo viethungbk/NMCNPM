@@ -55,7 +55,7 @@ $this->load->view('admin/admin/head');
 								<img src="<?php echo public_url() ?>admin/images/icons/color/edit.png">
 							</a>
 
-							<a href="<?php echo admin_url('admin/delete/'.$key->id) ?>" class="tipS verify_action" original-title="Xóa">
+							<a href="<?php echo admin_url('admin/del/'.$key->id) ?>" class="tipS verify_action" original-title="Xóa">
 								<img src="<?php echo public_url() ?>admin/images/icons/color/delete.png">
 							</a>
 						</td>

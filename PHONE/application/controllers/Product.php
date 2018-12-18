@@ -1,4 +1,4 @@
-<?php
+<?php 
 Class Product extends MY_Controller
 {
 	function __construct()
@@ -7,7 +7,44 @@ Class Product extends MY_Controller
         //load model san pham
 		$this->load->model('product_model');
 	}
-	
+	/*
+     * Trang dang danh sách sản phẩm
+     */
+    public function index()
+    {
+        //Buoc 1:load thu vien phan trang
+        $this->load->library('pagination');
+        //Buoc 2:Cau hinh cho phan trang
+        //lay tong so luong san pham tu trong csdl
+        $total_rows = $this->product_model->get_total();
+        $this->data['total_rows'] = $total_rows;
+        $this->load->library('pagination');
+
+        $config = array();
+        $config['base_url']    = base_url('product/index');// link hiển thị ra danh sách sản phẩm
+        $config['total_rows']  = $total_rows;   //lấy ra tổng số lượng sản phẩm
+        $config['per_page']    = 10; //số lượng sản phẩm hiển thị trong 1 trang
+        $config['uri_segment'] = 3;
+        $config['next_link']   = "Trang kế tiếp";
+        $config['prev_link']   = "Trang trước";
+    
+        //Khoi tao phan trang
+        $this->pagination->initialize($config);
+    
+        //lay danh sach san pham trong csdl,moi lan lay limit 3 san pham
+        //$this->uri->segment(n): lay ra phan doan thu n tren link url
+        $segment = $this->uri->segment(3);
+        $segment = intval($segment);
+        $input = array();
+        $input['limit'] = array($config['per_page'], $segment);
+        
+        $products = $this->product_model->get_list($input);
+        $this->data['list'] = $products;
+    
+        // Hien thi view
+        $this->data['temp'] = 'site/product/index';
+        $this->load->view('site/layout', $this->data);
+    }
     /*
      * Hiển thị danh sách sản phẩm theo danh mục
      */

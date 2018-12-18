@@ -40,12 +40,8 @@
 <div id="menu"><!-- the menu -->
  <ul class="menu_top">
    <li class="active index-li"><a href="<?php echo base_url()?>">Trang chủ </a></li>
-   <li class=""><a href="info/view/1.html">Giới thiệu</a></li>
-   <li class=""><a href="info/view/2.html">Hướng dẫn</a></li>
-   <li class=""><a href="san-pham.html">Sản phẩm</a></li>
-   <li class=""><a href="tin-tuc.html">Tin tức</a></li>
-   <li class=""><a href="video.html">Video</a></li>
-   <li class=""><a href="lien-he.html">Liên hệ</a></li>
+   <li class=""><a href="<?php echo base_url('Product')?>">Sản phẩm</a></li>
+   <li class=""><a href="https://tinhte.vn/">Tin tức</a></li>
    <?php if(isset($user_info)):?>
     <li class=""><a href="<?php echo site_url('user')?>">Xin chào: <?php echo $user_info->name?></a></li>
     <li class=""><a href="<?php echo site_url('user/logout')?>">Thoát</a></li>

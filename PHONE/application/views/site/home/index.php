@@ -36,7 +36,7 @@ $this->load->view('site/slide');
 
 					<div class='action'>
 						<p style='float:left;margin-left:10px'>Lượt xem: <b><?php echo $key->view ?></b></p>
-						<a class='button' href="" title='Mua ngay'>Mua ngay</a>
+						<a class='button' href="<?php echo base_url('product/view/'.$key->id) ?>" title='chi tiết'>Chi tiết</a>
 						<div class='clear'></div>
 					</div>
 				</div>
@@ -60,7 +60,7 @@ $this->load->view('site/slide');
 							<?php echo $key->name ?>	                     </a>
 						</h3>
 						<div class='product_img'>
-							<a  href="" title="<?php echo $key->name ?>">
+							<a  href="<?php echo base_url('product/view/'.$key->id) ?>" title="<?php echo $key->name ?>">
 								<img src="<?php echo base_url('upload/product/'.$key->image_link ) ?>" alt=''/>
 							</a>
 						</div>
@@ -81,7 +81,7 @@ $this->load->view('site/slide');
 
 							<div class='action'>
 								<p style='float:left;margin-left:10px'>Lượt mua: <b><?php echo $key->view ?></b></p>
-								<a class='button' href="" title='Mua ngay'>Mua ngay</a>
+								<a class='button' href="<?php echo base_url('product/view/'.$key->id) ?>" title='chi tiết'>Chi tiết</a>
 								<div class='clear'></div>
 							</div>
 						</div>

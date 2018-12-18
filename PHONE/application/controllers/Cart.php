@@ -1,74 +1,67 @@
-<?php 
-/**
- * 
- */
-class Cart extends MY_Controller
+<?php
+Class Cart extends MY_Controller
 {
-	
-	function __construct()
-	{
-		parent::__construct();
-		
-	}	
-
-	/*
-	* Thêm sản phẩm vao giỏ hàng
-	*/
-	function add($id){
-
-		//lấy ra sản phẩm muốn thêm vào giỏ hàng
-		$this->load->model('product_model');
-		$id=$this->uri->rsegment(3);
-		$product=$this->product_model->get_info($id);
-
-		//nếu không tồn tại sản phẩm thì redirect về trang chủ
-		if(!$product){
-			redirect();
-		}
-
-		//nếu có tồn tại sản phẩm thì thêm sản phẩm vào trong giỏ hàng
-		//tổng số sản phẩm 
-		$qty=1;
-		$price=$product->price;
-		if($product->discount>0)
-		{
-			$price=$product->price - $product->discount;
-		}
-
-		//thông tin thêm vào giỏ hàng
-		$data=array();//biến chứa thông tin sản phẩm
-		$data['id']=$product->id;
-		$data['qty']=$qty;
-		$data['name']=url_title($product->name);
-		$data['image_link']=$product->image_link;
-		$data['price']=$price; 
-		$this->cart->insert($data);
-
-		//chuyển sang trang danh sách sản phẩm trong giỏ hàng
-		redirect(base_url('cart'));
-	}	
-
-	/*
-	* Hiển thị ra danh sách sản phẩm trong giỏ hàng
-	*/
-	function index()
-	{
-		//thông tin giỏ hàng
-		$carts=$this->cart->contents();
-		//tổng số sản phẩm có trong giỏ hàng
-		$total_items=$this->cart->total_items();
-
-		$this->data['total_items']=$total_items;
-		$this->data['carts']=$carts;
-
-		$this->data['temp']='site/cart/index';
-		$this->load->view('site/layout', $this->data);
-	}
-
-	/**
-	* Cập nhật giỏ hàng
-	*/
-	function update()
+    function __construct()
+    {
+        parent::__construct();
+        
+    }
+    
+    /*
+     * Phuoc thuc them san pham vao gio hang
+     */
+    function add()
+    {
+        //lay ra san pham muon them vao gio hang
+        $this->load->model('product_model');
+        $id = $this->uri->rsegment(3);
+        $product = $this->product_model->get_info($id);
+        if(!$product)
+        {
+            redirect();
+        }
+        //tong so san pham
+        $qty = 1;
+        $price = $product->price;
+        if($product->discount > 0)
+        {
+            $price = $product->price - $product->discount;
+        }
+        
+        //thong tin them vao gio hang
+        $data = array();
+        $data['id'] = $product->id;
+        $data['qty'] = $qty;
+        $data['name'] = url_title($product->name);
+        $data['image_link']  = $product->image_link;
+        $data['price'] = $price;
+        $this->cart->insert($data);
+        
+        //chuyen sang trang danh sach san pham trong gio hang
+        redirect(base_url('cart'));
+    }
+    
+    /*
+     * Hien thị ra danh sách sản phẩm trong gio hàng
+     */
+    function index()
+    {
+        //thong gio hang
+        $carts = $this->cart->contents();
+        //tong so san pham co trong gio hang
+        $total_items = $this->cart->total_items();
+        
+        $this->data['carts'] = $carts;
+        $this->data['total_items']  =$total_items;
+        
+        $this->data['temp']  ='site/cart/index';
+        $this->load->view('site/layout', $this->data);
+    }
+    
+    /*
+     * Cập nhật giỏ hàng
+     */
+    function update()
     {
         //thong gio hang
         $carts = $this->cart->contents();
@@ -85,7 +78,6 @@ class Cart extends MY_Controller
         //chuyen sang trang danh sach san pham trong gio hang
         redirect(base_url('cart'));
     }
-
     
     /*
      * Xoa sản phẩm trong gio hang
@@ -118,5 +110,6 @@ class Cart extends MY_Controller
         //chuyen sang trang danh sach san pham trong gio hang
         redirect(base_url('cart'));
     }
-}	
- ?>
+}
+
+

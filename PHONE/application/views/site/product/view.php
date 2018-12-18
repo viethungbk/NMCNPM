@@ -180,7 +180,6 @@
 	<div class="usual" id="usual1">
 		<ul>
 			<li><a title="Chi tiết sản phẩm" rel='tab2' href='javascript:void(0)' class="tab selected">Chi tiết sản phẩm</a></li>
-			<li><a title="Video" rel='tab3' href='javascript:void(0)' class="tab">Video</a></li> 
 	       <?php /*?>
 	       <li><a title="Hỏi đáp về sản phẩm" rel='tab4' href='javascript:void(0)' class="tab">Hỏi đáp về sản phẩm</a></li> 
 	       <?php */?>        
@@ -197,10 +196,7 @@
 					<div class="fb-comments" data-href="<?php echo current_url()?>" data-num-posts="5" data-width="550" data-colorscheme="light"></div>
 				</center>   
 			</div>
-			<div id="tab3" style="display: none;"> 
-				<!-- the div chay video -->
-				<div id='mediaspace' style="margin:5px;"></div>
-			</div>
+			
 		</div>
 
 

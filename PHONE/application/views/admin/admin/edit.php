@@ -11,7 +11,7 @@ $this->load->view('admin/admin/head', $this->data);
 		</div>
 		<form class="form" id="form" action="" method="post" enctype="multipart/form-data">		
 			<fieldset>					
-				<div class="formRow">
+				 <div class="formRow">
 					<label class="formLeft" for="param_name">Tên:<span class="req">*</span></label>
 					<div class="formRight">
 						<span class="oneTwo"><input name="name" id="param_name" _autocheck="true" value="<?php echo $info->name ?>" type="text"></span>

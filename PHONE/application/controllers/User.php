@@ -47,7 +47,7 @@ Class User extends MY_Controller
             $this->form_validation->set_rules('re_password', 'Nhập lại mật khẩu', 'matches[password]');
             $this->form_validation->set_rules('phone', 'Số điện thoại', 'required');
             $this->form_validation->set_rules('address', 'Địa chỉ', 'required');
-            
+  
             //nhập liệu chính xác
             if($this->form_validation->run())
             {
@@ -180,7 +180,7 @@ Class User extends MY_Controller
             
             $this->form_validation->set_rules('phone', 'Số điện thoại', 'required');
             $this->form_validation->set_rules('address', 'Địa chỉ', 'required');
-            
+        
             //nhập liệu chính xác
             if($this->form_validation->run())
             {

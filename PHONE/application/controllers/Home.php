@@ -12,7 +12,7 @@ class Home extends MY_Controller {
 		//Lấy danh sách sản phẩm mới
 		$this->load->model('product_model');
 		$input=array();
-		$input['limit']=array(3,0);
+		$input['limit']=array(6,0);
 		$product_newsest=$this->product_model->get_list($input);
 		$this->data['product_newsest']=$product_newsest;
 
