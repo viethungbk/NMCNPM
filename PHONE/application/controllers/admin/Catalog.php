@@ -44,13 +44,13 @@ Class Catalog extends MY_Controller
                 //them vao csdl
                 $name       = $this->input->post('name');
                 $parent_id  = $this->input->post('parent_id');
-                $sort_order = $this->input->post('sort_order');
+                
                 
                 //luu du lieu can them
                 $data = array(
                     'name'      => $name,
                     'parent_id' => $parent_id,
-                    'sort_order' => intval($sort_order)
+                    
                 );
                 //them moi vao csdl
                 if($this->catalog_model->create($data))
@@ -106,13 +106,13 @@ Class Catalog extends MY_Controller
                 //them vao csdl
                 $name       = $this->input->post('name');
                 $parent_id  = $this->input->post('parent_id');
-                $sort_order = $this->input->post('sort_order');
+                
     
                 //luu du lieu can them
                 $data = array(
                     'name'      => $name,
                     'parent_id' => $parent_id,
-                    'sort_order' => intval($sort_order)
+                    
                 );
                 //them moi vao csdl
                 if($this->catalog_model->update($id, $data))

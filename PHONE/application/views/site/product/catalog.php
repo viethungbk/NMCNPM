@@ -32,7 +32,7 @@
 
 					<div class='action'>
 						<p style='float:left;margin-left:10px'>Lượt xem: <b><?php echo $key->view ?></b></p>
-						<a class='button' href="" title='Mua ngay'>Mua ngay</a>
+						<a class='button' href="<?php echo base_url('product/view/'.$key->id) ?>" title='Chi tiết'>Chi tiết</a>
 						<div class='clear'></div>
 					</div>
 				</div>

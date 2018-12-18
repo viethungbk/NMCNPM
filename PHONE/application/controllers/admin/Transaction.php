@@ -71,19 +71,19 @@ Class Transaction extends MY_Controller
             $where['status'] = $status;
         }
         //lọc theo thời gian
-   	    $created_to = $this->input->get('created_to');
-   	    $created    = $this->input->get('created');
-   	    if($created && $created_to)
-   	    {
-   	    	//tiem kiem tu ngay A -> B
-   	    	$time = get_time_between_day($created,$created_to);
-   	        //nếu dữ liệu trả về hợp lệ
-	   	    if(is_array($time))
-	   	    {	
-		   	    $where['created >='] = $time['start'];
-		   	    $where['created <='] = $time['end'];
-	   	    }
-   	    }
+        $created_to = $this->input->get('created_to');
+        $created    = $this->input->get('created');
+        if($created && $created_to)
+        {
+            //tiem kiem tu ngay A -> B
+            $time = get_time_between_day($created,$created_to);
+            //nếu dữ liệu trả về hợp lệ
+            if(is_array($time))
+            {   
+                $where['created >='] = $time['start'];
+                $where['created <='] = $time['end'];
+            }
+        }
         //gắn các điệu điện lọc
         $input['where'] = $where;
         
@@ -99,18 +99,12 @@ Class Transaction extends MY_Controller
         //lay nội dung của biến message
         $message = $this->session->flashdata('message');
         $this->data['message'] = $message;
-     
+        
         //load view
         $this->data['temp'] = 'admin/transaction/index';
         $this->load->view('admin/main', $this->data);
     }
-
     
-    /*
-     * ------------------------------------------------------
-     *  Action handle
-     * ------------------------------------------------------
-     */
     /**
      * Xem chi tiet giao dich
      */
@@ -125,6 +119,7 @@ Class Transaction extends MY_Controller
             return false;
         }
         $info->_amount = number_format($info->amount);
+
         if($info->status == 0)
         {
             $info->_status = 'pending';//đợi xử lý
@@ -137,6 +132,8 @@ Class Transaction extends MY_Controller
         {
             $info->_status = 'cancel';//hủy bỏ
         }
+
+        
         //lấy danh sách đơn hàng  của giao dịch này
         $this->load->model('order_model');
         $input = array();
@@ -146,7 +143,6 @@ Class Transaction extends MY_Controller
         {
             return false;
         }
-        
         //load model sản phẩm product_model
         $this->load->model('product_model');
         foreach ($orders as $row)
@@ -155,7 +151,7 @@ Class Transaction extends MY_Controller
             $product = $this->product_model->get_info($row->product_id);
             $product->image = public_url('upload/product/'.$product->image_link);
             $product->_url_view = site_url('product/view/'.$product->id);
-            	
+                
             $row->_price = number_format($product->price);
             $row->_amount = number_format($row->amount);
             $row->product = $product;
@@ -180,7 +176,7 @@ Class Transaction extends MY_Controller
             $row->_url_cancel = admin_url('transaction/cancel/'.$row->id);
             $row->_url_active = admin_url('transaction/active/'.$row->id);//link kích hoạt đơn hàng
         }
-    
+        
         $this->data['info']   = $info;
         $this->data['orders'] = $orders;
         // Tai file thanh phan
@@ -216,7 +212,7 @@ Class Transaction extends MY_Controller
         $data = array();
         $data['buyed'] = $product->buyed + $info->qty; //cap nhat so luong da mua
         $this->product_model->update($product->id, $data);
-        	
+            
         //gui thong bao
         $this->session->set_flashdata('message', 'Đã cập nhật trạng thái đơn hàng thành công');
         redirect(admin_url('order'));

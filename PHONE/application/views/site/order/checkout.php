@@ -59,8 +59,7 @@
                       <select name="payment">
                           <option value="">---- Chọn cổng thanh toán -----</option>
                           <option value="offline">Thanh toán khi nhận hàng</option>
-                          <option value="baokim">Bảo Kim</option>
-                          <option value="nganluong">Ngân lượng</option>
+                          
                           
                       </select>
                       <div class="clear"></div>
@@ -80,3 +79,4 @@
           </div><!-- End box-content-center -->
        
 </div>
+
