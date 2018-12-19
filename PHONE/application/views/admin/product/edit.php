@@ -16,7 +16,7 @@
 				
 				<ul class="tabs">
 					<li class="activeTab"><a href="#tab1">Thông tin chung</a></li>
-					<li class=""><a href="#tab2">SEO Onpage</a></li>
+					
 					<li class=""><a href="#tab3">Bài viết</a></li>
 					
 				</ul>

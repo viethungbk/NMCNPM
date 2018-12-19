@@ -39,15 +39,7 @@ $this->load->view('admin/catalog/head', $this->data);
 					<div class="clear"></div>
 				</div>	
 
-				<div class="formRow">
-					<label class="formLeft" for="param_name">Thứ tự hiển thị:<span class="req"></span></label>
-					<div class="formRight">
-						<span class="oneTwo"><input name="sort_order" id="param_sort_order" _autocheck="true" value="<?php echo $info->sort_order ?>" type="text"></span>
-						<span name="name_autocheck" class="autocheck"></span>
-						<div name="name_error" class="clear error"><?php echo form_error("sort_order"); ?></div>
-					</div>
-					<div class="clear"></div>
-				</div> 	 								
+										
 
 				<div class="formSubmit">
 					<input type="submit" value="Thêm mới" class="redB">

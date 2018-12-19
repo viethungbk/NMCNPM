@@ -4,9 +4,9 @@
 	<!-- Account panel -->
 
 	<div class="sideProfile">
-		<a href="#" title="" class="profileFace"><img width="40" src="<?php echo public_url() ?>admin/images/user.png"></a>
+		<a href="#" title="" class="profileFace"><img src="<?php echo public_url('admin')?>/images/user.png" width="40"></a>
 		<span>Xin chào: <strong>admin!</strong></span>
-		<span>Vũ Duy Mạnh</span>
+		<span>Nhóm 10</span>
 		<div class="clear"></div>
 	</div>
 	<div class="sidebarSep"></div>		    
@@ -16,27 +16,27 @@
 
 		<li class="home">
 
-			<a href="<?php echo admin_url(); ?>" class="active" id="current">
+			<a href="<?php echo admin_url()?>" class="active" id="current">
 				<span>Bảng điều khiển</span>
 				<strong></strong>
 			</a>
-
+			
 
 		</li>
 		<li class="tran">
 
-			<a href="admin/tran.html" class="exp inactive">
+			<a href="" class="exp inactive">
 				<span>Quản lý bán hàng</span>
 				<strong>2</strong>
 			</a>
-
-			<ul class="sub" style="display: none;">
+			
+			<ul style="display: none;" class="sub">
 				<li>
-					<a href="admin/tran.html">
+					<a href="<?php echo admin_url('transaction')?>">
 					Giao dịch							</a>
 				</li>
 				<li>
-					<a href="admin/product_order.html">
+					<a href="<?php echo admin_url('order')?>">
 					Đơn hàng sản phẩm							</a>
 				</li>
 			</ul>
@@ -44,88 +44,54 @@
 		</li>
 		<li class="product">
 
-			<a href="admin/product.html" class="exp inactive">
+			<a href="" class="exp inactive">
 				<span>Sản phẩm</span>
-				<strong>3</strong>
+				<strong>2</strong>
 			</a>
+			<ul style="display: none;" class="sub">
+				<li>
+					<a href="<?php echo admin_url('product')?>">
+						Sản phẩm							
+					</a>
+				</li>
+				<li>
+					<a href="<?php echo admin_url('catalog')?>">
+						Danh mục							
+					</a>
+				</li>
 
-			<ul class="sub" style="display: none;">
-				<li>
-					<a href="<?php echo admin_url('Product') ?>">
-					Sản phẩm							</a>
-				</li>
-				<li>
-					<a href="<?php echo admin_url('catalog'); ?>">
-					Danh mục							</a>
-				</li>
-				
 			</ul>
 
 		</li>
 		<li class="account">
 
-			<a href="admin/account.html" class="exp inactive">
+			<a href="" class="exp inactive">
 				<span>Tài khoản</span>
-				<strong>3</strong>
-			</a>
-
-			<ul class="sub" style="display: none;">
-				<li>
-					<a href="<?php echo admin_url('Admin'); ?>">
-					Ban quản trị							</a>
-				</li>
-				<li>
-					<a href="admin/admin_group.html">
-					Nhóm quản trị							</a>
-				</li>
-				<li>
-					<a href="admin/user.html">
-					Thành viên							</a>
-				</li>
-			</ul>
-
-		</li>
-		<li class="support">
-
-			<a href="admin/support.html" class="exp inactive">
-				<span>Hỗ trợ và liên hệ</span>
 				<strong>2</strong>
 			</a>
-
-			<ul class="sub" style="display: none;">
+			
+			<ul style="display: none;" class="sub">
 				<li>
-					<a href="admin/support.html">
-					Hỗ trợ							</a>
+					<a href="<?php echo admin_url('admin')?>">
+						Ban quản trị							
+					</a>
 				</li>
+
 				<li>
-					<a href="admin/contact.html">
-					Liên hệ							</a>
+					<a href="<?php echo admin_url('user')?>">
+					Thành viên							</a>
 				</li>
 			</ul>
 
 		</li>
 		<li class="content">
 
-			<a href="admin/content.html" class="exp inactive">
-				<span>Nội dung</span>
-				<strong>4</strong>
+			<a href="<?php echo admin_url('news')?>" >
+				<span>Bài viết</span>
+				<strong>2</strong>
 			</a>
-
-			<ul class="sub" style="display: none;">
-				<li>
-					<a href="admin/slide.html">
-					Slide							</a>
-				</li>
-				
-				<li>
-					<a href="<?php echo base_url() ?>">
-					Trang thông tin							</a>
-				</li>
-				<li>
-					<a href="admin/video.html">
-					Video							</a>
-				</li>
-			</ul>
+			
+			
 
 		</li>
 

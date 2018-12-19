@@ -21,7 +21,7 @@ $this->load->view('admin/catalog/head', $this->data);
 				<tr>
 					<td style="width:10px;"><img src="<?php echo public_url() ?>admin/images/icons/tableArrows.png"></td>
 					<td style="width:80px;">Mã số</td>
-					<td style="width:80px;">Thứ tự hiển thị</td>
+					
 					<td>Tên danh mục</td>					
 					<td style="width:100px;">Hành động</td>
 				</tr>
@@ -54,7 +54,7 @@ $this->load->view('admin/catalog/head', $this->data);
 						</td>
 
 						<td class="textC"><?php echo $key->id ?></td>
-						<td class="textC"><?php echo $key->sort_order ?></td>
+						
 						<td>
 							<span class="tipS" original-title="<?php echo $key->name ?>">
 								<?php echo $key->name ?>						

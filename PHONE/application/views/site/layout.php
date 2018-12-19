@@ -21,11 +21,14 @@
 			</div>
 
 			<div class="content">
-				<?php $this->load->view($temp); ?>
+				<?php if(isset($message)):?>
+					<h3 style="color:red"><?php echo $message?></h3>
+				<?php endif;?>
+				<?php $this->load->view($temp , $this->data);?>
 			</div>
 
 			<div class="right">
-				<?php $this->load->view('site/right'); ?>
+				<?php $this->load->view('site/right',$this->data); ?>
 			</div>
 
 			<div class="clear">

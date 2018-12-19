@@ -1,7 +1,7 @@
  
 <!-- Quy tắc đặt tên: tên controller = tên thư mục view
 	Tên action = ten file trong thư mục view -->
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +24,7 @@
 						<div class="loginInput"><input type="text" name="username" id="param_username"></div>
 						<div class="clear"></div>
 					</div>
-
+ 
 					<div class="formRow">
 						<label for="param_password">Mật khẩu:</label>
 						<div class="loginInput"><input type="password" name="password" id="param_password"></div>

@@ -6,14 +6,14 @@
 		
 		<div class="userNav">
 			<ul>
-				<li><a href="" target="_blank">
-					<img style="margin-top:7px;" src="<?php echo public_url() ?>admin/images/icons/light/home.png">
+				<li><a href="<?php echo admin_url()?>">
+					<img src="<?php echo public_url('admin')?>/images/icons/light/home.png" style="margin-top:7px;">
 					<span>Trang chủ</span>
 				</a></li>
 				
 				<!-- Logout -->
-				<li><a href="<?php echo admin_url('Admin/logout'); ?>">
-					<img src="<?php echo public_url() ?>admin/images/icons/topnav/logout.png" alt="">
+				<li><a href="<?php echo admin_url('admin/logout')?>">
+					<img alt="" src="<?php echo public_url('admin')?>/images/icons/topnav/logout.png">
 					<span>Đăng xuất</span>
 				</a></li>
 				

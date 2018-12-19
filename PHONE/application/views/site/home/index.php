@@ -10,19 +10,15 @@ $this->load->view('site/slide');
 		<?php foreach ($product_newsest as $key): ?>					
 			<div class='product_item'>
 				<h3>
-					<a  href="" title="<?php echo $key->name ?>">
+					<a  href="<?php echo base_url('product/view/'.$key->id) ?>" title="<?php echo $key->name ?>">
 						<?php echo $key->name ?>	                     
 					</a>
 				</h3>
 				<div class='product_img'>
-					<a  href="" title="<?php echo $key->name ?>">
+					<a  href="<?php echo base_url('product/view/'.$key->id) ?>" title="<?php echo $key->name ?>">
 						<img src="<?php echo base_url('upload/product/'.$key->image_link ) ?>" alt=''/>
 					</a>
 				</div>
-
-
-
-
 
 				<p class='price'>
 					<?php if($key->discount > 0): ?>
@@ -33,14 +29,13 @@ $this->load->view('site/slide');
 							<?php echo number_format($key->price); ?>đ
 						<?php endif; ?>
 					</p>
-
 					<center>
-						<div class='raty' style='margin:10px 0px' id='9' data-score='4'></div>
+					<div class='raty' style='margin:10px 0px' id='<?php echo $key->id?>' data-score='<?php echo  ($key->rate_count > 0) ? $key->rate_total/$key->rate_count : 0?>'></div>
 					</center>
 
 					<div class='action'>
 						<p style='float:left;margin-left:10px'>Lượt xem: <b><?php echo $key->view ?></b></p>
-						<a class='button' href="" title='Mua ngay'>Mua ngay</a>
+						<a class='button' href="<?php echo base_url('product/view/'.$key->id) ?>" title='chi tiết'>Chi tiết</a>
 						<div class='clear'></div>
 					</div>
 				</div>
@@ -64,14 +59,10 @@ $this->load->view('site/slide');
 							<?php echo $key->name ?>	                     </a>
 						</h3>
 						<div class='product_img'>
-							<a  href="" title="<?php echo $key->name ?>">
+							<a  href="<?php echo base_url('product/view/'.$key->id) ?>" title="<?php echo $key->name ?>">
 								<img src="<?php echo base_url('upload/product/'.$key->image_link ) ?>" alt=''/>
 							</a>
 						</div>
-
-
-
-
 
 						<p class='price'>
 							<?php if($key->discount > 0): ?>
@@ -88,8 +79,8 @@ $this->load->view('site/slide');
 							</center>
 
 							<div class='action'>
-								<p style='float:left;margin-left:10px'>Lượt xem: <b><?php echo $key->view ?></b></p>
-								<a class='button' href="" title='Mua ngay'>Mua ngay</a>
+								<p style='float:left;margin-left:10px'>Lượt mua: <b><?php echo $key->view ?></b></p>
+								<a class='button' href="<?php echo base_url('product/view/'.$key->id) ?>" title='chi tiết'>Chi tiết</a>
 								<div class='clear'></div>
 							</div>
 						</div>
