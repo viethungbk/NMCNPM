@@ -39,7 +39,7 @@ $price_to_select = isset($price_to) ? intval($price_to) : 0;
 			<div class="form-row">
 				<label class="form-label">&nbsp;</label>
 				<div class="form-item">
-					<input class="button" name="search" value="Tìm kiềm" style="height:30px !important;line-height:30px !important;padding:0px 10px !important" type="submit">
+					<input class="button" name="search" value="Tìm kiếm" style="height:30px !important;line-height:30px !important;padding:0px 10px !important" type="submit">
 				</div>
 				<div class="clear"></div>
 			</div>
