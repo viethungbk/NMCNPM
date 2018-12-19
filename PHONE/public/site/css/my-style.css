@@ -84,5 +84,10 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-
+#contact h2 {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 25px;
+}
 /* Hết css phần footer */
+

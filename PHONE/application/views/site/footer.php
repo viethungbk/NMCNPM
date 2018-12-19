@@ -1,12 +1,8 @@
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
 <!-- The box-footer-->
-
+<!-- Font awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
-
+<!-- GG font -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 
@@ -72,11 +68,3 @@
         </div>
     </section>
     <!-- Contact area ends -->
-
-<div id="footer_text"> <!-- The footer_text --> 
-	<strong><h3>Bài tập lớn Nhập môn công nghệ phần mềm. - Nhóm 10</h3></strong>
-	<br>
-	<p><h4>Giảng viên hướng dẫn: <i>TS. Bùi Thị Mai Anh</i> </h5></p>
-	
-
-</div><!-- End footer_text -->
