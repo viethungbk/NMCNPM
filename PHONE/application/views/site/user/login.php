@@ -34,5 +34,7 @@
 </form>
 <div class="clear"></div>
 </div><!-- End box-content-center -->
-
+<div>
+  <u><a style="color:red" href="<?= base_url('admin'); ?>"><h4>Chuyển đến trang đăng nhập admin</h4></a> </u>
+</div>
 </div>
