@@ -27,7 +27,7 @@
     </p>
     
     <center>
-     <div class='raty' style='margin:10px 0px' id='9' data-score='4'></div>
+     <div class='raty' style='margin:10px 0px' id='<?php echo $row->id?>' data-score='<?php echo  ($row->rate_count > 0) ? $row->rate_total/$row->rate_count : 0?>'></div>
    </center>
    
    <div class="action">

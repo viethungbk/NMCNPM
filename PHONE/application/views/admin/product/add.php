@@ -17,7 +17,7 @@ $this->load->view('admin/product/head', $this->data);
 
 				<ul class="tabs">
 					<li><a href="#tab1">Thông tin chung</a></li>
-					<li><a href="#tab2">SEO Onpage</a></li>
+					
 					<li><a href="#tab3">Bài viết</a></li>
 
 				</ul>
@@ -155,25 +155,7 @@ $this->load->view('admin/product/head', $this->data);
 							<div class="clear"></div>
 						</div>
 
-						<div class="formRow">
-							<label class="formLeft" for="param_meta_desc">Meta description:</label>
-							<div class="formRight">
-								<span class="oneTwo"><textarea name="meta_desc" id="param_meta_desc" _autocheck="true" rows="4" cols=""></textarea></span>
-								<span name="meta_desc_autocheck" class="autocheck"></span>
-								<div name="meta_desc_error" class="clear error"></div>
-							</div>
-							<div class="clear"></div>
-						</div>
-
-						<div class="formRow">
-							<label class="formLeft" for="param_meta_key">Meta keywords:</label>
-							<div class="formRight">
-								<span class="oneTwo"><textarea name="meta_key" id="param_meta_key" _autocheck="true" rows="4" cols=""></textarea></span>
-								<span name="meta_key_autocheck" class="autocheck"></span>
-								<div name="meta_key_error" class="clear error"></div>
-							</div>
-							<div class="clear"></div>
-						</div>
+						
 						<div class="formRow hide"></div>
 					</div>
 

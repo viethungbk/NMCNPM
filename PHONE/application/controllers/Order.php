@@ -58,7 +58,7 @@ Class Order extends MY_Controller
                 $payment = $this->input->post('payment');
                 //them vao csdl
                  $data = array(
-                    'status'   => 0, //trang thai chua thanh toan
+                    
                     'user_id'  => $user_id, //id thanh vien mua hang neu da dang nhap
                     'user_email'    => $this->input->post('email'),
                     'user_name'     => $this->input->post('name'),
@@ -82,7 +82,7 @@ Class Order extends MY_Controller
                         'product_id'     => $row['id'],
                         'qty'            => $row['qty'],
                         'amount'         => $row['subtotal'],
-                        'status'         => '0',
+                       
                     );
                     $this->order_model->create($data);
                 }

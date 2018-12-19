@@ -25,7 +25,7 @@ class News extends MY_Controller
    	  $config = array();
    	  $config['base_url']    = base_url('news/index');
    	  $config['total_rows']  = $total_rows;
-   	  $config['per_page']    = 3;
+   	  $config['per_page']    = 5;
    	  $config['uri_segment'] = 3;
    	  $config['next_link']   = "Trang kế tiếp";
    	  $config['prev_link']   = "Trang trước";
@@ -34,7 +34,9 @@ class News extends MY_Controller
    	  $this->pagination->initialize($config);
    	  
    	  $input = array();
-   	  $input['limit'] = array($config['per_page'], $this->uri->segment(3));
+      $segment = $this->uri->segment(3);
+      $segment = intval($segment);
+   	  $input['limit'] = array($config['per_page'], $segment);
    	  //lay danh sach bai viet trong csdl,moi lan lay limit 3 bai viet
    	  //$this->uri->segment(n): lay ra phan doan thu n tren link url
       $newss = $this->news_model->get_list($input);
