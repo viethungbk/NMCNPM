@@ -2,6 +2,7 @@
 <!-- The box-header-->
 
 <link type="text/css" href="<?php echo public_url() ?>js/jquery/autocomplete/css/smoothness/jquery-ui-1.8.16.custom.css" rel="stylesheet">	
+
 <script type="text/javascript" src="<?php echo public_url() ?>js/jquery/autocomplete/jquery-ui-1.8.16.custom.min.js"></script>
 
 <script type="text/javascript">
@@ -15,6 +16,7 @@
   <div id="logo"><!-- the logo -->
    <a href="<?php echo base_url() ?>" title="Website bán điện thoại by Nhóm 10">
     <img src="<?php echo public_url() ?>site/images/logo3.png" alt="Website bán điện thoại by Nhóm 10">
+
   </a>
 </div><!-- End logo -->
 

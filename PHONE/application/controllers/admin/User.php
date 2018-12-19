@@ -18,8 +18,10 @@ class User extends MY_Controller {
  * ------------------------------------------------------
  */
  /*
+
     * Kiểm tra email đã tồn tại hay chưa
     */
+
    function check_email()
    {
    	   
@@ -223,10 +225,11 @@ class User extends MY_Controller {
 	function index()
 	{
 	     //Buoc 1:load thu vien phan trang
-   	    $this->load->library('pagination');
+   	    $this->load->library('pagination'); 
    	    //Buoc 2:Cau hinh cho phan trang
    	    //lay tong so luong thanh vien tu trong csdl
    	    $total_rows = $this->user_model->get_total();
+   	    $this->data['total_rows'] = $total_rows;
    	    $config = array();
    	    $config['base_url']    = base_url('admin/user/index');
    	    $config['total_rows']  = $total_rows;

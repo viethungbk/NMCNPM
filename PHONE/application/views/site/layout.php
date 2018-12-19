@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>WebApp Nhóm 10</title>
+	<link rel="shortcut icon" href="<?php echo public_url() ?>site/images/icon1.png" type="image/x-icon">
 	<?php $this->load->view('site/head'); ?>
 </head>
 <body>

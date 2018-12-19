@@ -9,7 +9,7 @@
 		<div class="title">
 			<span class="titleIcon"><input type="checkbox" id="titleCheck" name="titleCheck" /></span>
 			<h6><?php echo lang('list'); ?> <?php echo lang('mod_user'); ?></h6>
-		 	<div class="num f12"><?php echo lang('total'); ?>: <b>0</b></div>
+		 	<div class="num f12"><?php echo lang('total'); ?>: <b><?php echo $total_rows ?></b></div>
 		</div>
 		
 		<form action="<?php echo $action; ?>" method="get" class="form" name="filter">
