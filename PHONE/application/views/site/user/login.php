@@ -36,7 +36,7 @@
 </div><!-- End box-content-center -->
 <div class="loginadmin">
 	<u>
-		<a style="color:red"href="<?= base_url('public/admin/'); ?>">
+		<a style="color:red"href="<?= base_url('admin'); ?>">
 			<h4>Chuyển đến trang đăng nhập admin</h4>
 		</a> 
 	</u> 
