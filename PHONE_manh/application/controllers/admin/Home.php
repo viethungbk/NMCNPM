@@ -1,0 +1,61 @@
+﻿<?php
+Class Home extends MY_Controller
+{
+    function __construct()
+    {
+        parent::__construct();
+        //load ra file model
+        $this->load->helper('language');
+        
+    }
+
+    function index()
+    {
+        
+        // Tai cac file thanh phan
+        $this->load->model('user_model');
+        $this->load->model('transaction_model');
+        $this->load->model('user_model');
+        $this->load->model('news_model');
+        $this->load->model('product_model');
+        
+        
+        //thong ke doanh thu ngay hom nay
+        $today = get_date(now());
+        $time  = get_time_between($today);
+        $where = array(
+            'created <=' => $time['end'],
+            'created >=' => $time['start'],
+            );
+        $amount_to_day = $this->transaction_model->get_sum('amount', $where);
+        $this->data['amount_to_day'] = $amount_to_day;
+        
+        //tong thu theo thang nay
+        $thangnay = get_date(now());
+        $time     = get_time_between($thangnay, '1');
+        $where = array(
+            'created <=' => $time['end'],
+            'created >=' => $time['start'],
+            );
+        $tongtien_thang = $this->transaction_model->get_sum('amount', $where);
+        $this->data['tongtien_thang'] = $tongtien_thang;
+        
+
+        $amount_total = $this->transaction_model->get_sum('amount', $where);
+        $this->data['amount_total'] = $amount_total;
+        	
+        //thống kê tổng số
+        $this->data['total_transaction'] = $this->transaction_model->get_total();
+        $this->data['total_product'] = $this->product_model->get_total();
+        $this->data['total_news']    = $this->news_model->get_total();
+        $this->data['total_user']    = $this->user_model->get_total();
+        $this->data['total_news']    = $this->news_model->get_total();
+        
+        
+        $this->lang->load('admin/home');
+        
+        $this->data['temp'] = 'admin/home/index';
+        $this->load->view('admin/main', $this->data);
+    }
+}
+
