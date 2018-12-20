@@ -133,7 +133,7 @@ Class Transaction extends MY_Controller
         {
             //thông tin sản phẩm
             $product = $this->product_model->get_info($row->product_id);
-            $product->image = public_url('upload/product/'.$product->image_link);
+            $product->image = base_url('upload/product/'.$product->image_link);
             $product->_url_view = site_url('product/view/'.$product->id);           
             $row->_price = number_format($product->price);
             $row->_amount = number_format($row->amount);
