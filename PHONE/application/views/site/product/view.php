@@ -141,7 +141,7 @@ $(document).ready(function() {
 		               <?php endif;?>
 		               		               
 		               Đánh giá &nbsp;
-                       <span class='raty_detailt' style = 'margin:5px' id='<?php echo $product->id?>' data-score='<?php echo $product->raty?>'></span> 
+                       <span class='raty_detailt' style = 'margin:5px' id='<?php echo $product->id?>' data-score='<?php echo $product->rate_total/$product->rate_count ?>'></span> 
                        | Tổng số: <b  class='rate_count'><?php echo $product->rate_count?></b>
    
 		               <div class='action'>

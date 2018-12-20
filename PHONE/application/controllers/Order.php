@@ -4,6 +4,7 @@ Class Order extends MY_Controller
     function __construct()
     {
         parent::__construct();
+        $this->load->model('product_model');
     }
     
     /*
@@ -15,7 +16,7 @@ Class Order extends MY_Controller
         $carts = $this->cart->contents();
         //tong so san pham co trong gio hang
         $total_items = $this->cart->total_items();
-       
+
         if($total_items <= 0)
         {
             redirect();
@@ -55,10 +56,10 @@ Class Order extends MY_Controller
             //nhập liệu chính xác
             if($this->form_validation->run())
             {
-                $payment = $this->input->post('payment');
+                $payment = $this->input->post('payment'); 
                 //them vao csdl
-                 $data = array(
-                    
+                $data = array(
+
                     'user_id'  => $user_id, //id thanh vien mua hang neu da dang nhap
                     'user_email'    => $this->input->post('email'),
                     'user_name'     => $this->input->post('name'),
@@ -82,7 +83,7 @@ Class Order extends MY_Controller
                         'product_id'     => $row['id'],
                         'qty'            => $row['qty'],
                         'amount'         => $row['subtotal'],
-                       
+
                     );
                     $this->order_model->create($data);
                 }
@@ -93,8 +94,24 @@ Class Order extends MY_Controller
                     //tạo ra nội dung thông báo
                     $this->session->set_flashdata('message', 'Bạn đã đặt hàng thành công, chúng tôi sẽ kiểm tra và gửi hàng cho bạn');
                     //chuyen tới trang chu hoac chi tiet don hang
-                    redirect(site_url());
+                    
                 }
+                $data=array();
+                foreach ($carts as $row)
+                {
+                    $id=$row['id'];
+                    
+                    $product = $this->product_model->get_info($id); 
+                    
+                    
+                    $data['buyed']=$product->buyed + 1;
+                    if($product->total>0){
+                        $data['total']=$product->total - 1;
+                    }
+                    
+                    $this->product_model->update($product->id,$data);                     
+                }                
+                redirect(site_url());
             }
         }
 

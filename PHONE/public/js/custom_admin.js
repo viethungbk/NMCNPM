@@ -135,7 +135,6 @@
 				ids.push($(this).val());
 			});
 			
-			
 			if (!ids.length) return false;
 			
 			//link xoa du lieu

@@ -62,7 +62,22 @@
 							</div>
 							<div class="clear"></div>
 						</div>
-
+						
+						<div class="formRow">
+							<label for="param_price" class="formLeft">
+								Số sản phẩm trong kho :
+								<span class="req">*</span>
+							</label>
+							<div class="formRight">
+								<span class="oneTwo">
+									<input type="text" value="<?php echo $product->total?>" _autocheck="true" class="format_number" id="param_price" style="width:100px" name="total">
+									<img src="<?php echo public_url('admin')?>/crown/images/icons/notifications/information.png" style="margin-bottom:-8px" class="tipS" original-title="Số lượng sản phẩm tồn kho">
+								</span>
+								<span class="autocheck" name="price_autocheck"></span>
+								<div class="clear error" name="price_error"></div>
+							</div>
+							<div class="clear"></div>
+						</div>
 						<!-- Price -->
 						<div class="formRow">
 							<label for="param_price" class="formLeft">

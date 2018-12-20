@@ -75,7 +75,7 @@ $this->load->view('site/slide');
 							</p>
 
 							<center>
-								<div class='raty' style='margin:10px 0px' id='9' data-score='4'></div>
+								<div class='raty' style='margin:10px 0px' id='<?php echo $key->id?>' data-score='<?php echo  ($key->rate_count > 0) ? $key->rate_total/$key->rate_count : 0?>'></div>
 							</center>
 
 							<div class='action'>

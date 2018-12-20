@@ -55,7 +55,21 @@ $this->load->view('admin/product/head', $this->data);
 							</div>
 							<div class="clear"></div>
 						</div>
-
+						<!-- Price -->
+						<div class="formRow">
+							<label class="formLeft" for="param_price">
+								Số lượng sản phẩm trong kho :
+								<span class="req">*</span>
+							</label>
+							<div class="formRight">
+								<span class="oneTwo">
+									<input name="total" style="width:100px" id="param_price" class="format_number" _autocheck="true" type="text">
+									<img class="tipS" title="Số lượng sản phẩm tồn kho" style="margin-bottom:-8px" src="<?php echo public_url('admin') ?>/crown/images/icons/notifications/information.png">
+								</span>
+								
+							</div>
+							<div class="clear"></div>
+						</div>
 						<!-- Price -->
 						<div class="formRow">
 							<label class="formLeft" for="param_price">

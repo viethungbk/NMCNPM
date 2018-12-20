@@ -27,7 +27,7 @@ Class Product extends MY_Controller
         $config['next_link']   = 'Trang kế tiếp';
         $config['prev_link']   = 'Trang trước';
         //khoi tao cac cau hinh phan trang
-        $this->pagination->initialize($config);
+        $this->pagination->initialize($config); 
         
         $segment = $this->uri->segment(4);
         $segment = intval($segment);
@@ -116,6 +116,7 @@ Class Product extends MY_Controller
                 //them vao csdl
                 $name        = $this->input->post('name');
                 $catalog_id  = $this->input->post('catalog');
+                $total       = $this->input->post('total');
                 $price       = $this->input->post('price');
                 $price       = str_replace(',', '', $price);
                 
@@ -142,6 +143,7 @@ Class Product extends MY_Controller
                 $data = array(
                     'name'       => $name,
                     'catalog_id' => $catalog_id,
+                    'total' => $total,
                     'price'      => $price,
                     'image_link' => $image_link,
                     'image_list' => $image_list,
@@ -247,6 +249,7 @@ Class Product extends MY_Controller
                 //them vao csdl
                 $name        = $this->input->post('name');
                 $catalog_id  = $this->input->post('catalog');
+                $total       = $this->input->post('total');
                 $price       = $this->input->post('price');
                 $price       = str_replace(',', '', $price);
                
@@ -272,6 +275,7 @@ Class Product extends MY_Controller
                 $data = array(
                     'name'       => $name,
                     'catalog_id' => $catalog_id,
+                    'total' => $total,
                     'price'      => $price,
                     'discount'   => $discount,
                     'warranty'   => $this->input->post('warranty'),
